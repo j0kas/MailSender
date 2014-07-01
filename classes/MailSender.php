@@ -1,50 +1,71 @@
 <?php
 
-class Barcode extends ObjectModel
+class MailSender
 {
-    public $id;
-    public $number;
-    public $id_product;
-    public $id_product_attribute;
-    public $id_order;
-    public $date;
-
-   
+    public $to;
+    public $cc;
+    public $bcc;
+    public $subject;
+    public $body;
+    
+    function __construct($to = null, $cc = null, $bcc = null, $subject = null, $body = null) {
+        
+        $this->to = self::checkFormat($to);
+        $this->cc = self::checkFormat($cc);
+        $this->bcc = self::checkFormat($bcc);
+        $this->subject = $subject;
+        $this->body = $body;
+        
+    }
+    
+    public function addRecipients($recipients) {
+        
+        $this->to = $this->to . self::checkFormat($recipients);
+        
+    }
+    
+    public function addCC($cc) {
+        
+        $this->cc = $this->cc . self::checkFormat($cc);
+        
+    }
+    
+    public function addBCC($bcc) {
+        
+        $this->bcc = $this->bcc . self::checkFormat($bcc);
+        
+    }
+    
     /**
-     * Generate new barcode object and throw it in db
-     * Note: Do not set id_product and id_order in same time
+     * Format data to get a string with valid emails semicolons-delimited
      * 
      * @static
-     * @access public
-     * @param int $id_product
-     * @param int $id_order
-     * @param string $number Barcode number (if not defined, generate it)
-     * @return \self
+     * @access private
+     * @param string|array $input
+     * @return string
      */
-    static public function generate($number = null, $id_product = null, $id_product_attribute = null, $id_order = null)
-    {
-        if (isset($id_product))
-            $type_digit = 1;
-        else $type_digit = 2;
+    static private function checkFormat($input) {
         
-        if(isset($id_product) && !isset($id_product_attribute))
-            $id_product_attribute = 0;
+        $output = "";
         
-        $barcode = new self();
-        $barcode->number = empty($number) ? self::generateNumber($type_digit) : $number;
-        $barcode->id_product = $id_product;
-        $barcode->id_product_attribute = $id_product_attribute;
-        $barcode->id_order = $id_order;
-        $barcode->saveBarcode();
-        
-        //TODO: Generate picture associated to number and decline to different size
-        foreach (self::$SIZES as $name => $size)
-        {
-            //TODO: Generate and save picture here
+        if (is_string($input))
+            $input = preg_split("/[\s\n\t\r,;]+/", $input);
+
+        if(is_array($input)) {
+            foreach ($input as $value) {
+                if (filter_var($value, FILTER_VALIDATE_EMAIL))
+                    $output == "" ? $output = $value . ";" : $output = $output . $value . ";";
+            }
         }
         
-        return $barcode;
+        return $output;
+        
     }
+    
 }
 
+$ms = new MailSender($_GET["to"],null,null,$_GET["subject"],$_GET["body"]);
+$arr = ["jokas@test.com","mouf@test.com"];
+$ms->addCC($arr);
+var_dump($ms);
 
