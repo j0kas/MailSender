@@ -37,7 +37,7 @@ class MailSender
     }
     
     /**
-     * Format data to get a string with valid emails semicolons-delimited
+     * Format data (string or array) to single string with valid emails only, semicolons-delimited
      * 
      * @static
      * @access private
@@ -63,9 +63,4 @@ class MailSender
     }
     
 }
-
-$ms = new MailSender($_GET["to"],null,null,$_GET["subject"],$_GET["body"]);
-$arr = ["jokas@test.com","mouf@test.com"];
-$ms->addCC($arr);
-var_dump($ms);
 
