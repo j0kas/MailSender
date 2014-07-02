@@ -4,10 +4,10 @@
     </head>
     <body>
         <div id="ms-links">
-            <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<?php $ms->to ?>&su=<?php $ms->subject ?>&body=<?php $ms->body ?>&bcc<?php $ms->bcc ?>&cc<?php $ms->cc ?>&tf=1" class="sprite sprite-gmail"></a>
-            <a target="_blank" href="http://compose.mail.yahoo.com/?to=<?php $ms->to ?>&subject=<?php $ms->subject ?>&body=<?php $ms->body ?>&bcc<?php $ms->bcc ?>&cc<?php $ms->cc ?>" class="sprite sprite-yahoo"></a>
-            <a target="_blank" href="http://mail.live.com/mail/EditMessageLight.aspx?n=&to=<?php $ms->to ?>&subject=<?php $ms->subject ?>&body=<?php $ms->body ?>&bcc<?php $ms->bcc ?>&cc<?php $ms->cc ?>" class="sprite sprite-hotmail"></a>
-            <a target="_blank" href="mailto:<?php $ms->to ?>?subject=<?php $ms->subject ?>&body=<?php $ms->body ?>&bcc<?php $ms->bcc ?>&cc<?php $ms->cc ?>" class="sprite sprite-client"></a>
+            <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<?php echo $_GET['to'] ?>&bcc=<?php $_GET['bcc'] ?>&cc=<?php $_GET['cc'] ?>&su=<?php echo $_GET['subject'] ?>&body=<?php echo $_GET['body'] ?>&tf=1" class="sprite sprite-gmail"></a>
+            <a target="_blank" href="http://compose.mail.yahoo.com/?to=<?php echo $_GET['to'] ?>&bcc=<?php $_GET['bcc'] ?>&cc=<?php $_GET['cc'] ?>&subject=<?php $_GET['subject'] ?>&body=<?php echo $_GET['body'] ?>" class="sprite sprite-yahoo"></a>
+            <a target="_blank" href="http://mail.live.com/mail/EditMessageLight.aspx?n=&to=<?php echo $_GET['to'] ?>&bcc=<?php $_GET['bcc'] ?>&cc=<?php $_GET['cc'] ?>&subject=<?php $_GET['subject'] ?>&body=<?php echo $_GET['body'] ?>" class="sprite sprite-hotmail"></a>
+            <a target="_blank" href="mailto:<?php echo $_GET['to'] ?>?&bcc=<?php echo $_GET['bcc'] ?>&cc=<?php $_GET['cc'] ?>&subject=<?php echo $_GET['subject'] ?>&body=<?php echo $_GET['body'] ?>" class="sprite sprite-client"></a>
         </div>
     </body>
 </html>
