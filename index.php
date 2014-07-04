@@ -1,4 +1,5 @@
 <?php
+    /** ma première contrib pour 2 faux (Flo) **/
     require_once 'classes/MailSender.php';
     $to = "example01@gmail.com;example02@hotmail.com";
     $subject = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet";
