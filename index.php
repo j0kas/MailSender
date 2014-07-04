@@ -85,7 +85,7 @@
                     <button id="ms-input">Send</button>
                     <div id="ms-links">
                         <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=<?php echo $ms->to ?>&bcc=<?php echo $ms->bcc ?>&cc=<?php echo $ms->cc ?>&su=<?php echo $ms->subject ?>&body=<?php  echo $ms->body ?>&tf=1" class="sprite sprite-gmail" title="Gmail"></a>
-                        <a target="_blank" href="http://compose.mail.yahoo.com/?to=<?php echo $ms->to ?>&bcc=<?php echo $ms->bcc ?>&cc=<?php echo $ms->cc ?>&subject=<?php echo $ms->subject ?>&body=<?php echo $ms->body ?>" class="sprite sprite-yahoo" title="Yahoo Mail"></a>
+                        <a target="_blank" href="http://compose.mail.yahoo.com/?to=<?php echo $ms->to ?>&bcc=<?php echo $ms->bcc ?>&cc=<?php echo $ms->cc ?>&subject=<?php echo urlencode($ms->subject) ?>&body=<?php echo $ms->body ?>" class="sprite sprite-yahoo" title="Yahoo Mail"></a>
                         <a target="_blank" href="http://mail.live.com/mail/EditMessageLight.aspx?n=&page=Compose&to=<?php echo $ms->to ?>&bcc=<?php echo $ms->bcc ?>&cc=<?php echo $ms->cc ?>&subject=<?php echo $ms->subject ?>&body=<?php echo $ms->body ?>" class="sprite sprite-hotmail" title="Windows Live Hotmail"></a>
                         <a target="_blank" href="mailto:<?php echo $ms->to ?>?bcc=<?php echo $ms->bcc ?>&cc=<?php echo $ms->cc ?>&subject=<?php echo $ms->subject ?>&body=<?php echo $ms->body ?>" class="sprite sprite-client" title="Client"></a>
                     </div>
