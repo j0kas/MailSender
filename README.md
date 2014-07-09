@@ -13,7 +13,7 @@
         * Client : ?
         * (limitations are after url encoding)
         
-        *Mail clients statistics for France pop :
+        * Mail clients statistics for France pop :
         * 1 - Orange => ~27%
         * 2 - Hotmail/Outlook => ~19%
         * 3 - Gmail => ~19%
