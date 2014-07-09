@@ -1,6 +1,6 @@
 # TODO MailSender
 * Trouver des stats sur l'utilisation des clients mails http://www.journaldunet.com/ebusiness/le-net/classement-services-mail/orange.shtml
-* Mettre un <div id="ms-nom-du-client"> autour de chaque <a>
+* Mettre un &lt;div id="ms-nom-du-client"&gt; autour de chaque &lt;a&gt;
 * voir comment ça peut se passer avec les mobiles
 * Tester l'URL https://mail.google.com/mail/u/0/x/?&v=b&eot=1&pv=tl&cs=b trouvé là : http://stackoverflow.com/questions/6548570/url-to-compose-a-message-in-gmail-with-full-gmail-interface-and-specified-to-b#answer-22548884
 * Problème de BCC sur hotmail.com
