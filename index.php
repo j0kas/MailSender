@@ -47,7 +47,7 @@
                         $("#ms-input").hide();
                     } 
                     else if($("input[name='int-style']:checked").val() == "popup") {
-                            $("#ms-input").attr("onclick", "window.open('popup.php?to=" + to + "&subject=" + subject + "&body=" + body + "&bcc=" + bcc + "&cc=" + cc + "','mailclient', 'height=50, width=325, top=100, left=100, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false;");
+                            $("#ms-input").attr("onclick", "window.open('popup.php?to=" + to + "&subject=" + subject + "&body=" + body + "&bcc=" + bcc + "&cc=" + cc + "','mailclient', 'height=170, width=325, top=100, left=100, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false;");
                             $("#ms-input").show();
                             $("#ms-container").fadeOut();
                         }
