@@ -1,5 +1,5 @@
 <?php
-    /** ma deuxième contrib pour 2 faux (Flo) **/
+    /** ma deuxiÃ¨me contrib pour 2 faux (Flo) **/
     require_once 'classes/MailSender.php';
     $to = "example01@gmail.com;example02@hotmail.com";
     $subject = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet";
@@ -40,26 +40,26 @@
                 subject = "<?php if($ms->subject) echo $ms->subject;?>";
                 body = "<?php if($ms->body) echo $ms->body;?>";
                 
-                $("#ms-links").hide();
+                $("#ms-container").hide();
                 $("input[name='int-style']").click(function() {
                     if($("input[name='int-style']:checked").val() == "direct") {
-                        $("#ms-links").fadeIn();
+                        $("#ms-container").fadeIn();
                         $("#ms-input").hide();
                     } 
                     else if($("input[name='int-style']:checked").val() == "popup") {
                             $("#ms-input").attr("onclick", "window.open('popup.php?to=" + to + "&subject=" + subject + "&body=" + body + "&bcc=" + bcc + "&cc=" + cc + "','mailclient', 'height=50, width=325, top=100, left=100, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false;");
                             $("#ms-input").show();
-                            $("#ms-links").fadeOut();
+                            $("#ms-container").fadeOut();
                         }
                         else { 
-                            $("#ms-links").hide();
+                            $("#ms-container").hide();
                             $("#ms-input").fadeIn();
                             $("#ms-input").attr("onclick", "");
                         }
                 });
                 $("#ms-input").click(function() {
                     if($("input[name='int-style']:checked").val() == "toggle")
-                        $("#ms-links").slideToggle("slow");
+                        $("#ms-container").slideToggle("slow");
                 });
             })
         </script>

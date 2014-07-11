@@ -1,6 +1,61 @@
-#ms-links
-{
+#ms-container {
     margin: 10px 0px 0px 0px;
+    width: 300px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Verdana, sans-serif;
+}
+
+#ms-gmail {
+    
+}
+
+#ms-yahoo {
+    
+}
+
+#ms-hotmail {
+    
+}
+
+#ms-client {
+    
+}
+
+#ms-others {
+    border-style: ridge;
+    margin-top: 5px;
+}
+
+#ms-others a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.ms-link {
+    display: inline-table;
+    width: 70px;
+}
+
+.ms-olink {
+    display: inline;
+    text-align: right;
+    margin: 3px;
+    padding-left: 17px;
+    width: 80px;
+    background-image: url(../img/url_icon.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.ms-title {
+    display: block;
+    text-align: center;
+    font-style: normal;
 }
 
 .sprite {
