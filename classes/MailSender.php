@@ -76,7 +76,7 @@ class MailSender
                             <i class="ms-title">Gmail</i>
                         </div>
                         <div id="ms-yahoo" class="ms-link">
-                            <a target="_blank" href="http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&cm-subject=' . $this->subject . '&body=' . $this->body . '" class="sprite sprite-yahoo" title="Yahoo Mail"></a>
+                            <a target="_blank" href="http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '" class="sprite sprite-yahoo" title="Yahoo Mail"></a>
                             <i class="ms-title">Yahoo</i>
                         </div>
                         <div id="ms-hotmail" class="ms-link">
@@ -95,7 +95,7 @@ class MailSender
                                 <a target="_blank" href="https://www.sfr.fr/">SFR</a>
                             </div>
                             <div id="ms-free" class="ms-olink">
-                                <a target="_blank" href="http://imp.free.fr/">Free</a>
+                                <a target="_blank" href="http://imp.free.fr/horde/imp/compose.php?popup=1&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '">Free</a>
                             </div>
                             <div id="ms-laposte" class="ms-olink">
                                 <a target="_blank" href="https://webmailz.laposte.net/mail#1">Laposte</a>
