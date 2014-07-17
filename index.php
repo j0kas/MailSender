@@ -1,5 +1,5 @@
 <?php
-    /** ma deuxiÃ¨me contrib pour 2 faux (Flo) **/
+    /** ma deuxiÃƒÂ¨me contrib pour 2 faux (Flo) **/
     require_once 'classes/MailSender.php';
     $to = "example01@gmail.com;example02@hotmail.com";
     $subject = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet";
@@ -76,7 +76,7 @@
                 <fieldset>
                     <legend><h5>Example</h5></legend>
                     <p>Here are two different email addresses :</p>
-                    <ul> 
+                    <ul>
                         <li>example01@gmail.com</li> 
                         <li>example02@hotmail.com</li> 
                     </ul> 

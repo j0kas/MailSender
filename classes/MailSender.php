@@ -72,38 +72,43 @@ class MailSender
         if (!self::isMobile()) {
             return '<div id="ms-container">
                         <div id="ms-gmail" class="ms-link">
-                            <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '&tf=1" class="sprite sprite-gmail" title="Gmail"></a>
+                            <a href="#" onclick="window.open(\'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-gmail-bg" title="Gmail"></a>
                             <i class="ms-title">Gmail</i>
                         </div>
                         <div id="ms-yahoo" class="ms-link">
-                            <a target="_blank" href="http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '" class="sprite sprite-yahoo" title="Yahoo Mail"></a>
+                            <a href="#" onclick="window.open(\'http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-yahoo-bg" title="Yahoo Mail"></a>
                             <i class="ms-title">Yahoo</i>
                         </div>
                         <div id="ms-hotmail" class="ms-link">
-                            <a target="_blank" href="http://mail.live.com/mail/EditMessageLight.aspx?n=&page=Compose&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '" class="sprite sprite-hotmail" title="Windows Live Hotmail"></a>
+                            <a href="#" onclick="window.open(\'http://mail.live.com/mail/EditMessageLight.aspx?n=&page=Compose&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-hotmail-bg" title="Windows Live Hotmail"></a>
                             <i class="ms-title">Hotmail</i>
                         </div>
                         <div id="ms-client" class="ms-link">
-                            <a href="mailto:' . $this->to . '?bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '" class="sprite sprite-client" title="Client"></a>
+                            <a href="mailto:' . $this->to . '?bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '" class="ms-bg-img ms-client-bg" title="Client"></a>
                             <i class="ms-title">Client de messagerie</i>
                         </div>
-                        <div id="ms-others">
-                            <div id="ms-orange" class="ms-olink">
-                                <a target="_blank" href="http://webmail1e.orange.fr/webmail/fr_FR/write.html">Orange</a>
-                            </div>
-                            <div id="ms-sfr" class="ms-olink">
-                                <a target="_blank" href="https://www.sfr.fr/">SFR</a>
-                            </div>
-                            <div id="ms-free" class="ms-olink">
-                                <a target="_blank" href="http://imp.free.fr/horde/imp/compose.php?popup=1&to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '">Free</a>
-                            </div>
-                            <div id="ms-laposte" class="ms-olink">
-                                <a target="_blank" href="https://webmailz.laposte.net/mail#1">Laposte</a>
-                            </div>
-                            <div id="ms-numericable" class="ms-olink">
-                                <a target="_blank" href="https://webmail.numericable.fr/ncn/mail/send.php?msg_to=' . $this->to . '&msg_bcc=' . $this->bcc . '&msg_cc=' . $this->cc . '&msg_subject=' . $this->subject . '&msg_text=' . $this->body . '">Num&eacute;ricable</a>
-                            </div>
+                        <div id="ms-orange" class="ms-link">
+                                <a href="#" onclick="window.open(\'http://webmail.orange.fr/webmail/fr_FR/write.html\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-orange-bg" title="Orange"></a>
+                                <i class="ms-title">Orange</i>
                         </div>
+                        <div id="ms-sfr" class="ms-link">
+                            <a href="#" onclick="window.open(\'https://www.sfr.fr/\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-sfr-bg" title="SFR"></a>
+                            <i class="ms-title">SFR</i>
+                        </div>
+                        <div id="ms-free" class="ms-link">
+                            <a href="#" onclick="window.open(\'http://imp.free.fr/horde/imp/compose.php?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-free-bg" title="Free"></a>
+                            <i class="ms-title">Free</i>
+                        </div>
+                        <div id="ms-laposte" class="ms-link">
+                            <a href="#" onclick="window.open(\'https://webmailz.laposte.net/mail#1\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-laposte-bg" title="Laposte"></a>
+                            <i class="ms-title">Laposte</i>
+                        </div>
+                        <div id="ms-numericable" class="ms-link">
+                            <a href="#" onclick="window.open(\'https://webmail.numericable.fr/ncn/mail/send.php?msg_to=' . $this->to . '&msg_bcc=' . $this->bcc . '&msg_cc=' . $this->cc . '&msg_subject=' . $this->subject . '&msg_text=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-numericable-bg" title="Num&eacute;ricable"></a>
+                                <i class="ms-title">Num&eacute;ricable</i>
+                        </div>
+                        <!--<div id="ms-others">
+                        </div>-->
                     </div>';
         } else {
             return '<div id="ms-container">

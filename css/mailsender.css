@@ -1,26 +1,75 @@
 #ms-container {
     margin: 10px 0px 0px 0px;
-    width: 300px;
-    text-align: center;
     font-size: 12px;
     font-weight: 500;
     font-family: Verdana, sans-serif;
 }
 
-#ms-gmail {
-    
+.ms-bg-img {
+    display: inline-block;
 }
 
-#ms-yahoo {
-    
+.ms-gmail-bg {
+    background-image: url(../img/gmail.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
 }
 
-#ms-hotmail {
-    
+.ms-yahoo-bg {
+    background-image: url(../img/yahoo.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
 }
 
-#ms-client {
-    
+.ms-hotmail-bg {
+    background-image: url(../img/hotmail.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-client-bg {
+    background-image: url(../img/client.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-orange-bg {
+    background-image: url(../img/orange.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-sfr-bg {
+    background-image: url(../img/sfr.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-free-bg {
+    background-image: url(../img/free.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-numericable-bg {
+    background-image: url(../img/numericable.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+
+.ms-laposte-bg {
+    background-image: url(../img/laposte.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
 }
 
 #ms-others {
@@ -45,7 +94,7 @@
     display: inline;
     text-align: right;
     margin: 3px;
-    padding-left: 17px;
+    padding-left: 25px;
     width: 80px;
     background-image: url(../img/url_icon.gif);
     background-repeat: no-repeat;
@@ -58,6 +107,7 @@
     font-style: normal;
 }
 
+/*
 .sprite {
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
@@ -87,3 +137,4 @@
     height: 70px;
     background-position: -85px -85px;
 }
+*/
