@@ -5,6 +5,10 @@
     font-family: Verdana, sans-serif;
 }
 
+#ms-input{
+    cursor: pointer;
+}
+
 .ms-bg-img {
     display: inline-block;
     cursor: pointer;
