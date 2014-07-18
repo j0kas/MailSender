@@ -1,5 +1,6 @@
 # TODO MailSender
 * Phrase : "Accéder directement à votre messagerie :"
+* utiliser  implode(",", $array);
 * Uniformiser les icônes (on pourra mettre le joli style enveloppe à postériori)
 * Faire un répertoire img/originales/ contenant les images les plus grandes possibles
 * Ajuster la taille des fenêtres pour chaque Client mail
