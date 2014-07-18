@@ -2,6 +2,7 @@
 	* This class will help you redirect your users to their favorite webmails in just one click. If it's possible, it will also autocomplete the to, bcc, cc, subject & body fields to ease the sending for the user.
 
 ## Roadmap
+<img src="img/roadmap/roadmap-01.png" />
 
 ### Version 1 : simple, fast and functional
 	* without complex things like use of APIs
