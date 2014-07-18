@@ -48,16 +48,17 @@ class MailSender
         
         $output = "";
         
-        if (is_string($input))
+        if (is_string($input)) {
             $input = preg_split("/[\s\n\t\r,;]+/", $input);
+        }
 
-        if(is_array($input)) {
-            foreach ($input as $value) {
+    	foreach ($input as $value) {
                 if (filter_var($value, FILTER_VALIDATE_EMAIL))
                     $output == "" ? $output = $value : $output = $output . ";" . $value;
+
+                    $output .= (($output == "") ?  "" : ";") . $value ;
             }
-        }
-        
+
         return $output;
         
     }
@@ -68,6 +69,18 @@ class MailSender
      * @return string
      */
     public function getHtml() {
+
+        $ret = '<div id="ms-container">';
+        foreach($mailClients as $mailClient) {
+        	$ret .= '<div id="ms-'.$mailClient->name()'." class="ms-link">';
+        	$ret .= $mailClient->getHtml();
+        	$ret .= '</div>';
+        }
+        $ret .= '</div>';
+        
+        return ret;
+    }
+
         
         if (!self::isMobile()) {
             return '<div id="ms-container">
