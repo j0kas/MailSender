@@ -19,7 +19,7 @@
         * Windows Live Hotmail : ~1750 chars
         * Gmail : ~1900 chars
         * Yahoo Mail : ~7000 chars
-        * Client : ?
+        * Client : ~1500 chars
         * (limitations are after url encoding)
         
         * Mail clients statistics for France pop :
