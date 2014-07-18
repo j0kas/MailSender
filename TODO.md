@@ -1,4 +1,5 @@
 # TODO MailSender
+* Phrase : "Accéder directement à votre messagerie :"
 * Faire une description dans le README et préciser le comportement avec les mobiles
 * A NOTER DANS LE README : Problème de BCC sur hotmail.com 
 * A NOTER DANS LE README : Problème de subject pour yahoo
