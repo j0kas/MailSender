@@ -112,34 +112,3 @@
     font-style: normal;
 }
 
-/*
-.sprite {
-    background-image: url(../img/spritesheet.png);
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-
-.sprite-client {
-    width: 70px;
-    height: 70px;
-    background-position: -5px -5px;
-}
-
-.sprite-gmail {
-    width: 70px;
-    height: 70px;
-    background-position: -85px -5px;
-}
-
-.sprite-hotmail {
-    width: 70px;
-    height: 70px;
-    background-position: -5px -85px;
-}
-
-.sprite-yahoo {
-    width: 70px;
-    height: 70px;
-    background-position: -85px -85px;
-}
-*/
