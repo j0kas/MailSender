@@ -2,7 +2,18 @@
     margin: 10px 0px 0px 0px;
     font-size: 12px;
     font-weight: 500;
-    font-family: Verdana, sans-serif;
+    font-family: Tahoma, sans-serif;
+    color: #2E2E2E;
+}
+
+#ms-container p{
+    font-size: 18px;
+    font-family: Impact, sans-serif;
+    color: #585858;
+}
+
+#ms-links-wrapper {
+    
 }
 
 #ms-input{
@@ -107,8 +118,77 @@
 }
 
 .ms-title {
+    padding-top: 5px;
     display: block;
     text-align: center;
     font-style: normal;
+}
+
+
+#ms-text-proposition{
+    display: inline-block;
+    margin: 15px 10px 0px 0px;
+    padding: 0px 15px 10px 15px;
+    width: 500px;
+    background-color: #fff;
+}
+
+#ms-text-proposition p{
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #6E6E6E;
+}
+
+#ms-text-proposition legend{
+    font-size: 22px;
+    font-family: Impact, sans-serif;
+    color: #424242;
+}
+
+#ms-recipients-proposition{
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0px 0px 0px;
+    padding: 5px 15px 5px 15px;
+    width: 200px;
+    background-color: #fff;
+}
+
+#ms-recipients-proposition p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #6E6E6E;
+}
+
+#ms-recipients-proposition legend{
+    font-size: 22px;
+    font-family: Impact, sans-serif;
+    color: #424242;
+}
+
+.ms-btn-copy{
+    vertical-align: bottom;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border: 0;
+    background-color: #088A68;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Arial Black", sans-serif;
+    cursor: pointer;
+}
+
+.centerize {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
