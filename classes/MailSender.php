@@ -18,23 +18,51 @@ class MailSender
         
     }
     
-    public function addRecipients($recipients) {
+    public function addRecipients($emails) {
         
-        $this->to = $this->to . self::checkFormat($recipients);
-        
-    }
-    
-    public function addCC($cc) {
-        
-        $this->cc = $this->cc . self::checkFormat($cc);
+        if($this->check($emails) == true) {
+        	$this->to = $this->to . self::format($emails);
+        }
         
     }
     
-    public function addBCC($bcc) {
+    public function addCC($emails) {
         
-        $this->bcc = $this->bcc . self::checkFormat($bcc);
+        if($this->check($emails) == true) {
+	        $this->cc = $this->cc . self::format($emails);
+        }
+    }
+    
+    public function addBCC($emails) {
+        
+        if($this->check($emails) == true) {
+	        $this->bcc = $this->bcc . self::format($emails);
+        }
         
     }
+    
+    
+    static private function check($emails) {
+    	
+    	$arrayEmails = array();
+    	if(is_string($emails)) {
+    		$arrayEmails[0] = $emails;
+        }
+        else {
+        	$arrayEmails = $emails;
+        }
+        
+        $ret = true;
+	foreach ($arrayEmails as $email) {
+        	if(filter_var($email, FILTER_VALIDATE_EMAIL) !== true) {
+                	echo "<p class='error' style='color:red;'>Cet email est mal formaté :  $email  </p>";
+                	ret = false;
+                }
+        }
+        
+        return ret;
+    }
+
     
     /**
      * Format data (string or array) to single string with valid emails only, semicolons-delimited
@@ -44,23 +72,13 @@ class MailSender
      * @param string|array $input
      * @return string
      */
-    static private function checkFormat($input) {
+    static private function format($emails) {
         
-        $output = "";
-        
-        if (is_string($input)) {
-            $input = preg_split("/[\s\n\t\r,;]+/", $input);
-        }
-        
-        if (is_array($input)) {
-            foreach ($input as $value) {
-                if (filter_var($value, FILTER_VALIDATE_EMAIL))
-                    $output .= (($output == "") ?  "" : ";") . $value ;
-            }
+        if(is_string($emails)) {
+        	return $emails;
         }
 
-        return $output;
-        
+	return implode(';', $emails);        
     }
     
     /**
