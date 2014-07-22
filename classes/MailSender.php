@@ -87,7 +87,7 @@ class MailSender
                                 <i class="ms-title">Orange</i>
                             </div>
                             <div id="ms-sfr" class="ms-link">
-                                <div onclick="window.open(\'https://www.sfr.fr/\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-sfr-bg" title="SFR"></div>
+                                <div onclick="window.open(\'https://messagerie.sfr.fr/\', \'\' ,\'width=1200, height=600, menubar=yes\')" class="ms-bg-img ms-sfr-bg" title="SFR"></div>
                                 <i class="ms-title">SFR</i>
                             </div>
                             <div id="ms-hotmail" class="ms-link">
@@ -95,7 +95,7 @@ class MailSender
                                 <i class="ms-title">Hotmail</i>
                             </div>
                             <div id="ms-yahoo" class="ms-link">
-                                <div onclick="window.open(\'http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=800, height=600, menubar=yes\')" class="ms-bg-img ms-yahoo-bg" title="Yahoo Mail"></div>
+                                <div onclick="window.open(\'http://compose.mail.yahoo.com/?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&su=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=1200, height=600, menubar=yes\')" class="ms-bg-img ms-yahoo-bg" title="Yahoo Mail"></div>
                                 <i class="ms-title">Yahoo</i>
                             </div>
                             <div id="ms-free" class="ms-link">
