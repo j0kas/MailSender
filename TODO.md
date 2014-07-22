@@ -1,6 +1,7 @@
 # TODO MailSender
+* Retirer les CSS contraignantes (width global et font)
 * Mettre les scrollbars
-* Gérer Imp et Zymbra (soit par 2 icônes soit par un div qui propose deux liens)
+* Gérer Imp et Zimbra (soit par 2 icônes soit par un div qui propose deux liens)
 * Faire une description dans le README et préciser le comportement avec les mobiles
 * test sur gmail, yahoo, hotmail, live, mail (apple), thunderbird
 * pour une version ultérieure, creuser une solution de popup ou iframe permettant de diviser l'écran en deux avec à gauche les propositions de sujet, corps, destinataires... Et à droite la fenêtre d'édition de mail du client.
