@@ -30,3 +30,5 @@
         * 5 - Yahoo => ~11%
         *
         * Source : http://www.journaldunet.com/ebusiness/le-net/classement-services-mail/
+        
+        * For mobile supports, only the client link will be displayed.
