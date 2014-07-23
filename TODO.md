@@ -1,19 +1,23 @@
 # TODO MailSender
-* Phrase : "Accéder directement à votre messagerie :"
-* utiliser  implode(",", $array);
-* Uniformiser les icônes (on pourra mettre le joli style enveloppe à postériori)
-* Faire un répertoire img/originales/ contenant les images les plus grandes possibles
-* Ajuster la taille des fenêtres pour chaque Client mail
-* SFR : https://messagerie.sfr.fr/
+* à copier/coller
+* Retirer les CSS contraignantes (width global et font)
+* Mettre les scrollbars
+* Gérer Imp et Zimbra (soit par 2 icônes soit par un div qui propose deux liens)
 * Faire une description dans le README et préciser le comportement avec les mobiles
-* A NOTER DANS LE README : Problème de BCC sur hotmail.com 
-* A NOTER DANS LE README : Problème de subject pour yahoo
-* boutons supplémentaires vers Orange, SFR, numéricable, free, laposte...
 * test sur gmail, yahoo, hotmail, live, mail (apple), thunderbird
 * pour une version ultérieure, creuser une solution de popup ou iframe permettant de diviser l'écran en deux avec à gauche les propositions de sujet, corps, destinataires... Et à droite la fenêtre d'édition de mail du client.
 * pour une version ultérieure, ça serait chouette de se pencher sur les possibilité offertes par les APIs.
 
 ## DONE
+* A NOTER DANS LE README : Problème de BCC sur hotmail.com 
+* A NOTER DANS LE README : Problème de subject pour yahoo
+* boutons supplémentaires vers Orange, SFR, numéricable, free, laposte...
+* Ajuster la taille des fenêtres pour chaque Client mail
+* SFR : https://messagerie.sfr.fr/
+* Faire un répertoire img/originales/ contenant les images les plus grandes possibles
+* Uniformiser les icônes (on pourra mettre le joli style enveloppe à postériori)
+* utiliser  implode(",", $array);
+* Phrase : "Accéder directement à votre messagerie :"
 * Tester l'URL https://mail.google.com/mail/u/0/x/?&v=b&eot=1&pv=tl&cs=b trouvé là : http://stackoverflow.com/questions/6548570/url-to-compose-a-message-in-gmail-with-full-gmail-interface-and-specified-to-b#answer-22548884
 --> fonctionne pas
 * * voir comment ça peut se passer avec les mobiles
