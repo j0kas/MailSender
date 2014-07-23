@@ -2,13 +2,11 @@
     margin: 10px 0px 0px 0px;
     font-size: 12px;
     font-weight: 500;
-    font-family: Tahoma, sans-serif;
     color: #2E2E2E;
 }
 
 #ms-container p{
     font-size: 18px;
-    font-family: Impact, sans-serif;
     color: #585858;
 }
 
@@ -127,23 +125,25 @@
 
 #ms-text-proposition{
     display: inline-block;
+    width: 60%;
     margin: 15px 10px 0px 0px;
     padding: 0px 15px 10px 15px;
-    width: 500px;
     background-color: #fff;
 }
 
 #ms-text-proposition p{
     font-size: 14px;
-    font-family: Tahoma, Geneva, sans-serif;
     font-weight: bold;
     color: #6E6E6E;
 }
 
 #ms-text-proposition legend{
     font-size: 22px;
-    font-family: Impact, sans-serif;
     color: #4D4D4D;
+}
+
+#ms-text-proposition legend span{
+    font-size: 16px;
 }
 
 #ms-recipients-proposition{
@@ -151,7 +151,6 @@
     vertical-align: top;
     margin: 15px 0px 0px 0px;
     padding: 0px 15px 5px 15px;
-    width: 200px;
     background-color: #fff;
 }
 
@@ -159,15 +158,17 @@
     margin-top: 2px;
     margin-bottom: 2px;
     font-size: 14px;
-    font-family: Tahoma, Geneva, sans-serif;
     font-weight: bold;
     color: #6E6E6E;
 }
 
 #ms-recipients-proposition legend{
     font-size: 22px;
-    font-family: Impact, sans-serif;
     color: #4D4D4D;
+}
+
+#ms-recipients-proposition legend span{
+    font-size: 16px;
 }
 
 .ms-btn-copy{
@@ -182,7 +183,6 @@
     background-color: #088A68;
     color: #fff;
     text-transform: uppercase;
-    font-family: "Arial Black", sans-serif;
     cursor: pointer;
 }
 
