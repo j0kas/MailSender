@@ -1,12 +1,13 @@
 <?php
     /** ma deuxiÃƒÂ¨me contrib pour 2 faux (Flo) **/
     require_once 'classes/MailSender.php';
-    $to = "example01@gmail.com;example02@hotmail.com";
+    $to = "example01@gmail.com";
     $subject = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet";
     $body = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.";
     //for($i=1;$i<7000;$i++){$body.= "x";}
     $ms = new MailSender();
     $ms->to = $to;
+    $ms->addRecipients("example02@hotmail.com");
     $ms->addBCC("example03@yahoo.com");
     $ms->addCC("example04@laposte.net");
     $ms->subject = $subject;
@@ -47,7 +48,7 @@
                         $("#ms-input").hide();
                     } 
                     else if($("input[name='int-style']:checked").val() == "popup") {
-                            $("#ms-input").attr("onclick", "window.open('popup.php?to=" + to + "&subject=" + subject + "&body=" + body + "&bcc=" + bcc + "&cc=" + cc + "','mailclient', 'height=170, width=325, top=100, left=100, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false;");
+                            $("#ms-input").attr("onclick", "window.open('popup.php?to=" + to + "&subject=" + subject + "&body=" + body + "&bcc=" + bcc + "&cc=" + cc + "','webmails', 'height=600, width=800, top=100, left=100, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false;");
                             $("#ms-input").show();
                             $("#ms-container").fadeOut();
                         }

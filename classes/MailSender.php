@@ -3,16 +3,17 @@
 class MailSender
 {
     public $to;
-    public $cc;
     public $bcc;
+    public $cc;
     public $subject;
     public $body;
     
-    function __construct($to = null, $cc = null, $bcc = null, $subject = null, $body = null) {
+    function __construct($to = null, $bcc = null, $cc = null, $subject = null, $body = null) {
         
-        $this->to = self::checkFormat($to);
-        $this->cc = self::checkFormat($cc);
-        $this->bcc = self::checkFormat($bcc);
+        
+        is_null($to) ? $this->to = $to : $this->to = self::check($to);
+        is_null($bcc) ? $this->bcc = $to : $this->bcc = self::check($bcc);
+        is_null($cc) ? $this->cc = $to : $this->cc = self::check($cc);
         $this->subject = $subject;
         $this->body = $body;
         
@@ -21,7 +22,15 @@ class MailSender
     public function addRecipients($emails) {
         
         if($this->check($emails) == true) {
-        	$this->to = $this->to . self::format($emails);
+        	$this->to = !is_null($this->to) ? $this->to . ";" .  self::format($emails) : self::format($emails);
+        }
+        
+    }
+    
+    public function addBCC($emails) {
+        
+        if($this->check($emails) == true) {
+	        $this->bcc = !is_null($this->bcc) ? $this->bcc . ";" .  self::format($emails) : self::format($emails);
         }
         
     }
@@ -29,18 +38,9 @@ class MailSender
     public function addCC($emails) {
         
         if($this->check($emails) == true) {
-	        $this->cc = $this->cc . self::format($emails);
+	        $this->cc = !is_null($this->cc) ? $this->cc . ";" .  self::format($emails) : self::format($emails);
         }
     }
-    
-    public function addBCC($emails) {
-        
-        if($this->check($emails) == true) {
-	        $this->bcc = $this->bcc . self::format($emails);
-        }
-        
-    }
-    
     
     static private function check($emails) {
     	
@@ -54,13 +54,13 @@ class MailSender
         
         $ret = true;
 	foreach ($arrayEmails as $email) {
-        	if(filter_var($email, FILTER_VALIDATE_EMAIL) !== true) {
-                	echo "<p class='error' style='color:red;'>Cet email est mal formaté :  $email  </p>";
-                	ret = false;
+        	if(filter_var($email, FILTER_VALIDATE_EMAIL) != true) {
+                	echo "<p class='error' style='color:red;'>Cet email est mal format&eacute; :  $email  </p>";
+                	$ret = false;
                 }
         }
         
-        return ret;
+        return $ret;
     }
 
     
@@ -117,7 +117,7 @@ class MailSender
                                 <i class="ms-title">Yahoo</i>
                             </div>
                             <div id="ms-free" class="ms-link">
-                                <div onclick="window.open(\'http://imp.free.fr/horde/imp/compose.php?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=1200, height=600, menubar=yes, scrollbars=yes\')" class="ms-bg-img ms-free-bg" title="Free"></div>
+                                <div onclick="window.open(\'popup_free.php?to=' . $this->to . '&bcc=' . $this->bcc . '&cc=' . $this->cc . '&subject=' . $this->subject . '&body=' . $this->body . '\', \'\' ,\'width=200, height=150, left=500, top=300, menubar=yes, scrollbars=yes\')" class="ms-bg-img ms-free-bg" title="Free"></div>
                                 <i class="ms-title">Free</i>
                             </div>
                             <div id="ms-laposte" class="ms-link">
