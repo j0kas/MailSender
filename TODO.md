@@ -1,5 +1,5 @@
 # TODO MailSender
-* à copier/coller
+* permettre le copier/coller avec un bouton avec http://zeroclipboard.org/
 * Retirer les CSS contraignantes (width global et font)
 * Mettre les scrollbars
 * Gérer Imp et Zimbra (soit par 2 icônes soit par un div qui propose deux liens)
