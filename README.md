@@ -32,3 +32,5 @@
         * Source : http://www.journaldunet.com/ebusiness/le-net/classement-services-mail/
         
         * For mobile supports, only the client link will be displayed.
+        
+        * Saw Google use this URL https://mail.google.com/mail/u/0/#inbox?compose=new on one own page
